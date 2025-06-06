@@ -1,6 +1,6 @@
 # Atesh or Ate or Atesh 
 
-Part of rewriting this was to write a very basic idea into something that I would use. My first plugin was a very bad and barely functioning distortion plugin; which I would tinker away at between circuit bending pedals for birthday presents. Ates (Fire in turkish... shhh, I'm trying to learn) takes this idea, and leans into it in a unique way, with the key tendents being unstable, volitle and corrupted.
+Part of rewriting this was to write a very basic idea into something that I would use. My first plugin was a very bad and barely functioning distortion plugin; which I would tinker away at between circuit bending pedals for birthday presents. Ates takes this idea, and leans into it in a unique way, with the key tendents being unstable, volitle and corrupted.
 
 # History
 
