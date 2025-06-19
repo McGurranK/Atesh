@@ -1,31 +1,137 @@
-# Atesh or Ate or Atesh 
+# Atesh (or Ate, or Atesh)
 
-Part of rewriting this was to write a very basic idea into something that I would use. My first plugin was a very bad and barely functioning distortion plugin; which I would tinker away at between circuit bending pedals for birthday presents. Ates takes this idea, and leans into it in a unique way, with the key tendents being unstable, volitle and corrupted.
+_A chaotic, unstable, and corrupted distortion plugin._
 
-# History
+Atesh is a reimagining of my very first (and very broken) distortion plugin—something I originally made while tinkering with circuit-bent pedals for birthday presents. This project leans hard into ideas of instability, unpredictability, and noise, turning a flawed concept into a tool I genuinely enjoy using.
 
-I have a bit of a weird history in creative improvisation, Rock and noise music. For a period of time mixer feedback was my favourite tool; on drum machines, by itself or in the context of a large ensemble. Ideas of managing a choatic system is something that I don't see enough in plugins and personally I would like to see it more. So, with Ates I wanted to lean into this & dilibarately curate a UI that takes my history looking into accessibility and providing something that I find fun to use.
+---
 
-# Wait you added Accessibility?
+## 🎛️ What is Atesh?
 
-So, a lot of the accessibility is handled by JUCE under the hood and tbh keyboard navigation can be super helpful even for people who are fully sighted using a mouse. Although, I am not Visually Impaired and am totally open to any feedback on UI/UX changes. At the moment, there is no value input and no one but me has used this.
+Atesh is a plugin designed to behave in strange and unpredictable ways. Its key tenets are:
 
-# UI Design (Why so ugly?)
+- **Unstable**
+- **Volatile**
+- **Corrupted**
 
-I will be the first to tell you that I do not have an eye for Software UI design, and at the moment I don't have the time learn.
+This isn't meant to be clean or precise—it's meant to be wild.
 
-# Building
+---
 
-The build system is projucer based with Juce as a submodule & when I get time I will properly integrate full cmake support.
+## 🧠 Background
 
-# Build Sets
+My creative roots are in improvisation, rock, and noise. For a time, mixer feedback was my favorite "instrument"—used on drum machines, in solo setups, or as part of chaotic live ensembles. I love the feeling of wrestling with something unstable, and that ethos is deeply baked into Atesh.
 
-- Clone this repo
-- make sure to init the Juce submodule
-- build the projucer out of this JUCE submodule
-- Open the projucer file for this project.
+I also wanted to bring in ideas from my interest in accessibility. The interface is intentionally curated to support keyboard navigation, and while I’m not visually impaired myself, I’d love to hear feedback from anyone who is.
 
-# Notes
+---
 
-I have only built this on macOS and it hasn't been through any extensive human or animal testing.... So, if you decide to try this and find anything please create an issue and i will take a look.
+## ♿ Accessibility
+
+Some accessibility features are inherited from JUCE (like keyboard focus and navigation), and while there’s no direct value input yet, keyboard users might find it surprisingly usable. I’m open to all feedback on how to improve the interface further.
+
+---
+
+## 🎨 UI Design (Why so ugly?)
+
+I'll be honest: UI design isn’t my strength. The visuals are deliberately simple and raw—partly due to time constraints, partly due to the theme. It’s functional, but far from polished. That said, the interface is meant to reflect the chaos behind the sound.
+
+---
+
+## 🛠️ Setup & Building Atesh
+
+Atesh can be built using either **CMake** (recommended) or **Projucer**. JUCE is included as a submodule.
+
+### ✅ Recommended: Building with CMake
+
+CMake provides a modern, IDE-agnostic build system.
+
+#### Prerequisites
+
+- CMake (3.15+)
+- A C++17-compatible compiler
+- JUCE (included via submodule)
+
+#### Steps
+
+1. Clone the repository with submodules:  
+   `git clone --recurse-submodules https://github.com/yourname/atesh.git`  
+   `cd atesh`
+
+   If you forgot `--recurse-submodules`:  
+   `git submodule update --init --recursive`
+
+2. Create a build directory:  
+   `mkdir build && cd build`
+
+3. Generate the project:  
+   `cmake ..`
+
+   You can specify options like:  
+   `-DCMAKE_BUILD_TYPE=Release`  
+   or a generator:  
+   `-G "Visual Studio 17 2022"`
+
+4. Build the plugin:  
+   `cmake --build .`
+
+5. Locate the output plugin file in `build/Debug/` or `build/Release/`.
+
+---
+
+### 🧪 Alternative: Building with Projucer
+
+1. Clone the repository with submodules:  
+   `git clone --recurse-submodules https://github.com/yourname/atesh.git`  
+   `cd atesh`
+
+2. Build the Projucer:  
+   Navigate to `JUCE/extras/Projucer/Builds/` and build the appropriate version for your platform.
+
+3. Open `Atesh.jucer` with Projucer.
+
+4. Configure plugin formats and settings as needed.
+
+5. Export to your IDE (Xcode, Visual Studio, etc.) and build the project.
+
+---
+
+### 🔍 Troubleshooting
+
+- **JUCE not found?**  
+  Run:  
+  `git submodule update --init --recursive`
+
+- **Plugin doesn't appear in your DAW?**  
+  Make sure you’re building the correct format (e.g. VST3, AU) and copying it to your system’s plugin folder.
+
+- **On Windows?**  
+  Use a CMake generator like:  
+  `cmake -G "Visual Studio 17 2022" ..`
+
+---
+
+## ⚠️ Notes & Disclaimers
+
+- Currently tested **only on macOS**
+- No automated testing (or manual QA!) yet
+- This is still a work in progress
+- Use at your own risk and feel free to open issues if you break it—or it breaks you
+
+---
+
+## 📬 Feedback
+
+If you’re using a screen reader or encounter UX challenges, I’m especially keen to hear from you. I want this to be fun, weird, and *usable*.
+
+---
+
+## 🚧 Future Plans
+
+- Better UI design (maybe)
+- MIDI control mapping
+- Full cross-platform testing
+- Preset saving/loading
+- More chaos knobs
+
 
