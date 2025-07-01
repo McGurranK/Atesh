@@ -32,9 +32,11 @@ Some accessibility features are inherited from JUCE (like keyboard focus and nav
 
 ---
 
-## 🎨 UI Design (Why so ugly?)
+## 🎨 UI Design
 
-I'll be honest: UI design isn’t my strength. The visuals are deliberately simple and raw—partly due to time constraints, partly due to the theme. It’s functional, but far from polished. That said, the interface is meant to reflect the chaos behind the sound.
+Although not finished, I am working on a full mockup for the UI in Figma. Including focus/keyboard states.
+
+![Atesh GUI](https://github.com/user-attachments/assets/d229c064-44d0-48a8-ba6a-36c0577f559a)
 
 ---
 
